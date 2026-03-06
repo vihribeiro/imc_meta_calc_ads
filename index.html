@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meta Calc — Calculadora Metabólica TMB & IMC</title>
+    <meta name="description"
+        content="Meta Calc: calculadora profissional de Taxa Metabólica Basal (TMB) e Índice de Massa Corporal (IMC) com histórico automático e recomendações personalizadas.">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-heartbeat"></i>
+                </div>
+                <div class="logo-text">
+                    <h1>Meta Calc</h1>
+                    <span class="tagline">Calculadora Metabólica</span>
+                </div>
+            </div>
+            <span class="header-badge"><i class="fas fa-shield-alt"></i> Dados locais — privacidade garantida</span>
+        </div>
+    </header>
+
+    <div class="hero-banner">
+        <div class="container">
+            <h2>Sua saúde, com dados precisos</h2>
+            <p>Calcule seu IMC e Taxa Metabólica Basal utilizando fórmulas reconhecidas internacionalmente. Os
+                resultados são salvos automaticamente no seu histórico.</p>
+            <div class="hero-steps">
+                <div class="hero-step">
+                    <span class="step-num">1</span>
+                    Preencha seus dados
+                </div>
+                <span class="step-arrow">→</span>
+                <div class="hero-step">
+                    <span class="step-num">2</span>
+                    Escolha a fórmula
+                </div>
+                <span class="step-arrow">→</span>
+                <div class="hero-step">
+                    <span class="step-num">3</span>
+                    Calcule e veja os resultados
+                </div>
+                <span class="step-arrow">→</span>
+                <div class="hero-step">
+                    <span class="step-num">4</span>
+                    Salvo automaticamente
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main class="main">
+        <div class="container">
+
+            <section class="input-section">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-header-icon">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div>
+                            <h2>Dados Pessoais</h2>
+                            <span class="card-subtitle">Preencha todos os campos para obter resultados precisos</span>
+                        </div>
+                    </div>
+
+                    <form id="userForm" class="form" novalidate>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="nome"><i class="fas fa-user-circle"></i> Nome completo</label>
+                                <input type="text" id="nome" placeholder="Ex: Ana Silva" required autocomplete="name">
+                                <span class="field-hint">Usado para personalizar seu relatório</span>
+                            </div>
+                            <div class="form-group">
+                                <label for="idade"><i class="fas fa-calendar-alt"></i> Idade</label>
+                                <input type="number" id="idade" min="15" max="100" placeholder="Ex: 28" required>
+                                <span class="field-hint">Entre 15 e 100 anos</span>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="peso"><i class="fas fa-weight"></i> Peso (kg)</label>
+                                <input type="number" id="peso" step="0.1" min="30" max="300" placeholder="Ex: 70.5"
+                                    required>
+                                <span class="field-hint">Entre 30 e 300 kg</span>
+                            </div>
+                            <div class="form-group">
+                                <label for="altura"><i class="fas fa-ruler-vertical"></i> Altura (cm)</label>
+                                <input type="number" id="altura" min="100" max="250" placeholder="Ex: 175" required>
+                                <span class="field-hint">Entre 100 e 250 cm</span>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label><i class="fas fa-venus-mars"></i> Sexo biológico</label>
+                                <div class="radio-group">
+                                    <label class="radio-label" id="label-masculino">
+                                        <input type="radio" name="sexo" value="masculino" required>
+                                        <i class="fas fa-mars"></i> Masculino
+                                    </label>
+                                    <label class="radio-label" id="label-feminino">
+                                        <input type="radio" name="sexo" value="feminino">
+                                        <i class="fas fa-venus"></i> Feminino
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="atividade"><i class="fas fa-running"></i> Nível de atividade</label>
+                                <select id="atividade" required>
+                                    <option value="">Selecione seu nível</option>
+                                    <option value="1.2">Sedentário — pouco ou nenhum exercício</option>
+                                    <option value="1.375">Leve — 1 a 3 dias/semana</option>
+                                    <option value="1.55">Moderado — 3 a 5 dias/semana</option>
+                                    <option value="1.725">Intenso — 6 a 7 dias/semana</option>
+                                    <option value="1.9">Muito intenso — treino duplo diário</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="formula"><i class="fas fa-flask"></i> Fórmula para cálculo da TMB</label>
+                            <select id="formula" required>
+                                <option value="">Escolha a fórmula</option>
+                                <option value="mifflin" selected>Mifflin-St Jeor — Recomendada (mais moderna)</option>
+                                <option value="harris">Harris-Benedict — Clássica</option>
+                            </select>
+                            <span class="field-hint">Mifflin-St Jeor é a mais precisa para a maioria das pessoas</span>
+                        </div>
+
+                        <button type="submit" class="btn-primary" id="btn-calcular">
+                            <i class="fas fa-calculator"></i> Calcular TMB e IMC
+                        </button>
+                    </form>
+                </div>
+            </section>
+
+            <section id="results-section" class="results-section hidden">
+
+                <div style="display:flex;align-items:center;justify-content:flex-end;margin-bottom:0.75rem;gap:10px;">
+                    <span id="autosave-badge" class="autosave-badge">
+                        <i class="fas fa-check-circle"></i> Salvo automaticamente
+                    </span>
+                </div>
+
+                <div class="results-grid">
+                    <div class="card result-card">
+                        <div class="card-header">
+                            <div class="card-header-icon">
+                                <i class="fas fa-weight"></i>
+                            </div>
+                            <div>
+                                <h3>Índice de Massa Corporal</h3>
+                                <span class="card-subtitle">IMC — classificação OMS</span>
+                            </div>
+                        </div>
+
+                        <div class="result-metric">
+                            <div class="result-value-big">
+                                <span id="imc-valor">--</span>
+                                <span class="unit">kg/m²</span>
+                            </div>
+                        </div>
+                        <div id="imc-classificacao" class="classification-badge">--</div>
+
+                        <div class="imc-scale">
+                            <div class="scale-item" data-range="abaixo">
+                                <span class="range">&lt; 18.5</span>
+                                <span class="label">Abaixo do peso</span>
+                            </div>
+                            <div class="scale-item" data-range="normal">
+                                <span class="range">18.5 – 24.9</span>
+                                <span class="label">Peso normal</span>
+                            </div>
+                            <div class="scale-item" data-range="sobrepeso">
+                                <span class="range">25.0 – 29.9</span>
+                                <span class="label">Sobrepeso</span>
+                            </div>
+                            <div class="scale-item" data-range="obesidade1">
+                                <span class="range">30.0 – 34.9</span>
+                                <span class="label">Obesidade I</span>
+                            </div>
+                            <div class="scale-item" data-range="obesidade2">
+                                <span class="range">35.0 – 39.9</span>
+                                <span class="label">Obesidade II</span>
+                            </div>
+                            <div class="scale-item" data-range="obesidade3">
+                                <span class="range">≥ 40.0</span>
+                                <span class="label">Obesidade III</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card result-card">
+                        <div class="card-header">
+                            <div class="card-header-icon">
+                                <i class="fas fa-fire-alt"></i>
+                            </div>
+                            <div>
+                                <h3>Taxa Metabólica Basal</h3>
+                                <span class="card-subtitle" id="formula-usada">--</span>
+                            </div>
+                        </div>
+
+                        <div class="result-metric">
+                            <div class="result-value-big">
+                                <span id="tmb-valor">--</span>
+                                <span class="unit">kcal/dia</span>
+                            </div>
+                        </div>
+
+                        <div class="tmb-details">
+                            <div class="detail-item">
+                                <span class="detail-label"><i class="fas fa-bolt"></i> Gasto Calórico Total (GCT)</span>
+                                <span class="detail-value" id="gasto-total">-- kcal/dia</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label"><i class="fas fa-arrow-down"></i> Para perder 0.5
+                                    kg/sem</span>
+                                <span class="detail-value" id="perda-peso">-- kcal/dia</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label"><i class="fas fa-arrow-up"></i> Para ganhar 0.5 kg/sem</span>
+                                <span class="detail-value" id="ganho-peso">-- kcal/dia</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card recommendations-card">
+                    <div class="card-header">
+                        <div class="card-header-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <div>
+                            <h3>Recomendações Personalizadas</h3>
+                            <span class="card-subtitle">Baseadas nos seus resultados de IMC e metabolismo</span>
+                        </div>
+                    </div>
+                    <div id="recomendacoes-content"></div>
+                </div>
+
+                <div class="action-buttons">
+                    <span class="action-section-title w-100">Compartilhar e exportar</span>
+                    <button onclick="compartilharWhatsApp()" class="btn-secondary" id="btn-whatsapp">
+                        <i class="fab fa-whatsapp"></i> Enviar via WhatsApp
+                    </button>
+                    <button onclick="gerarRelatorio()" class="btn-secondary" id="btn-pdf">
+                        <i class="fas fa-file-pdf"></i> Gerar Relatório PDF
+                    </button>
+                    <button onclick="novoCalculo()" class="btn-outline" id="btn-novo">
+                        <i class="fas fa-redo"></i> Novo Cálculo
+                    </button>
+                </div>
+            </section>
+
+            <section class="history-section">
+                <div class="card">
+                    <div class="history-header">
+                        <div class="card-header" style="margin-bottom:0">
+                            <div class="card-header-icon">
+                                <i class="fas fa-history"></i>
+                            </div>
+                            <div>
+                                <h3>Histórico de Consultas</h3>
+                                <span class="card-subtitle">Salvo automaticamente a cada cálculo</span>
+                            </div>
+                        </div>
+                        <div style="display:flex;align-items:center;gap:10px;">
+                            <span id="history-count-badge" class="history-count-badge">0 registros</span>
+                            <button onclick="limparHistorico()" class="btn-danger btn-small" id="btn-limpar">
+                                <i class="fas fa-trash"></i> Limpar
+                            </button>
+                        </div>
+                    </div>
+                    <div class="divider"></div>
+                    <div id="historico-lista" class="history-list">
+                        <div class="empty-state">
+                            <i class="fas fa-clipboard-list"></i>
+                            Nenhum cálculo realizado ainda. Preencha o formulário acima para começar.
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <div id="toast-container" class="toast-container"></div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <i class="fas fa-heartbeat"></i> Meta Calc
+                </div>
+                <p>Calculadora Metabólica · TMB & IMC · Projeto Acadêmico — Universidade Presbiteriana Mackenzie</p>
+                <p class="footer-team">Vinicius Santos Ribeiro · Anny Violeta Rodrigues Freire · Guilherme Henrique
+                    Ferraz Contrera · Matheus Neves Cavalcante</p>
+                <p>Prática Profissional em ADS · Prof. Cristiano Morais de Sousa / Paula Torales Leite &nbsp;|&nbsp; ©
+                    2026</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./script.js"></script>
+
+</body>
+
+</html>
