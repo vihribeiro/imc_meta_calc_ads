@@ -97,24 +97,51 @@ meta-calc/
 
 ---
 
-## Como Executar
+## Como Executar (Instruções Detalhadas para Desenvolvedores)
+
+O projeto foi construído utilizando tecnologias web padrão (HTML5, CSS3, e JavaScript Vanilla), sem a necessidade de frameworks de compilação ou processos de build. Isso torna o setup inicial instantâneo para qualquer desenvolvedor.
 
 ### Pré-requisitos
-Qualquer navegador moderno (Chrome 90+, Firefox 88+, Edge 90+, Safari 14+).
 
-### Opção 1: Clonar o repositório
+1. Um navegador web moderno (Google Chrome, Mozilla Firefox, Microsoft Edge, ou Apple Safari).
+2. Uma ferramenta de versionamento de código, como o [Git](https://git-scm.com/downloads), instalada na máquina (para clonar via terminal).
+3. Um editor de código de sua preferência. Recomendamos o **Visual Studio Code (VS Code)**.
+4. *(Recomendado)* No VS Code, a extensão **"Live Server"** instalada para suporte a hot-reload durante o desenvolvimento.
+
+### Passo a Passo: Clonagem e Execução Local
+
+**Passo 1: Obtenção do Código-Fonte (Clone do Repositório)**
+Abra o terminal (ou prompt de comando) em sua máquina e execute o seguinte comando:
 ```bash
-git clone https://github.com/vihribeiro/imc_meta_calc_ads
-cd imc_meta_calc_ads
-# Abra o arquivo index.html no navegador
+git clone https://github.com/vihribeiro/imc_meta_calc_ads.git
 ```
 
-### Opção 2: Download manual
-1. Acesse [github.com/vihribeiro/imc_meta_calc_ads](https://github.com/vihribeiro/imc_meta_calc_ads)
-2. Clique em **Code → Download ZIP**
-3. Extraia e abra `index.html` no navegador
+**Passo 2: Navegando para o Diretório do Projeto**
+Acesse a pasta criada pelo comando anterior:
+```bash
+cd imc_meta_calc_ads
+```
 
-> Nenhuma instalação ou servidor é necessário — a aplicação roda inteiramente no navegador.
+**Passo 3: Abrindo no Editor de Código (VS Code)**
+Ainda no terminal, execute o comando abaixo para abrir o projeto diretamente no editor:
+```bash
+code .
+```
+
+**Passo 4: Rodando a Aplicação**
+Como não há um servidor backend ou pipeline de build, você pode escolher uma das formas abaixo:
+
+*Método de Visualização Direta (Produção simulada):*
+- Pelo explorador de arquivos do seu sistema operacional, vá até a pasta `imc_meta_calc_ads`.
+- Dê um duplo clique no arquivo `index.html`. Ele será aberto no seu navegador padrão e estará totalmente funcional.
+
+*Método de Desenvolvimento (Recomendado):*
+- No VS Code aberto na pasta do projeto, clique com o botão direito sobre o arquivo `index.html`.
+- Selecione a opção **"Open with Live Server"**.
+- O Live Server irá instanciar um servidor web local (geralmente em `http://127.0.0.1:5500/index.html`) e abrirá o navegador.
+- Ao utilizar este modo, qualquer alteração que você realizar no código HTML, CSS ou JS será imediatamente atualizada no navegador, facilitando enormemente os testes em tempo real da Iteração 2 em diante.
+
+> Nota: Todos os dados (como o histórico do usuário) são persistidos utilizando a API nativa do `localStorage` do navegador. Nenhuma configuração de banco de dados ou backend é exigida.
 
 ---
 
