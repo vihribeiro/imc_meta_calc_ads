@@ -471,14 +471,24 @@
             <span class="toc-page">5</span>
         </div>
         <div class="toc-item">
-            <span class="toc-label">11. Conclusão</span>
+            <span class="toc-label">11. Guia do Usuário</span>
             <span class="toc-dots"></span>
-            <span class="toc-page">5</span>
+            <span class="toc-page">6</span>
         </div>
         <div class="toc-item">
-            <span class="toc-label">12. Referência Bibliográfica</span>
+            <span class="toc-label">12. Diagrama de Implantação</span>
             <span class="toc-dots"></span>
-            <span class="toc-page">5</span>
+            <span class="toc-page">8</span>
+        </div>
+        <div class="toc-item">
+            <span class="toc-label">13. Conclusão</span>
+            <span class="toc-dots"></span>
+            <span class="toc-page">9</span>
+        </div>
+        <div class="toc-item">
+            <span class="toc-label">14. Referência Bibliográfica</span>
+            <span class="toc-dots"></span>
+            <span class="toc-page">9</span>
         </div>
     </div>
 
@@ -509,11 +519,12 @@
             Matheus Neves Cavalcante
         </p>
 
-        <p class="section-title-numbered">3. URL de Acesso ao Repositório de Código-Fonte</p>
+        <p class="section-title-numbered">3. Links do Projeto</p>
 
         <p style="margin-left:30px; font-size:12pt; line-height:1.8;">
-            URL: <a
-                href="https://github.com/vihribeiro/imc_meta_calc_ads">https://github.com/vihribeiro/imc_meta_calc_ads</a>
+            Vídeo de Apresentação: <a href="https://youtu.be/imGx7qnlLNg">https://youtu.be/imGx7qnlLNg</a><br>
+            Repositório Github: <a href="https://github.com/vihribeiro/imc_meta_calc_ads">https://github.com/vihribeiro/imc_meta_calc_ads</a><br>
+            Projeto Hospedado: <a href="https://viniciushost.com/imcmeta/">https://viniciushost.com/imcmeta/</a>
         </p>
 
         <p class="section-title-numbered">4. URL de Acesso ao Quadro de Acompanhamento do Projeto</p>
@@ -671,13 +682,129 @@
             </li>
         </ul>
 
-        <p class="section-title-numbered">11. Conclusão</p>
+    </div>
+
+    <!-- ============================
+     PÁGINA 6 — GUIA DO USUÁRIO
+=============================== -->
+    <div class="page">
+        <p class="section-title-numbered">11. Guia do Usuário</p>
+
+        <p class="section-title" style="margin-left: 15px;">11.1 Apresentação do sistema</p>
+        <p class="body-text">
+            O IMC Meta é um aplicativo desenvolvido para auxiliar o usuário no cálculo de dois indicadores importantes de saúde:
+        </p>
+        <ul class="body-list">
+            <li><strong>IMC (Índice de Massa Corporal):</strong> usado para avaliar se a pessoa está dentro de uma faixa de peso adequada.</li>
+            <li><strong>TMB (Taxa Metabólica Basal):</strong> estima a quantidade de calorias que o corpo necessita para manter suas funções vitais em repouso.</li>
+        </ul>
+        <p class="body-text">
+            De acordo com o documento, o sistema também permite comparar o IMC com padrões da OMS, gerar relatórios com sugestões de déficit ou superávit calórico e manter um histórico dos cálculos realizados.
+        </p>
+
+        <p class="section-title" style="margin-left: 15px;">11.2 Público-alvo</p>
+        <p class="body-text">O sistema foi pensado para:</p>
+        <ul class="body-list">
+            <li>Usuários finais que desejam monitorar gasto calórico e IMC;</li>
+            <li>Profissionais de saúde, como nutricionistas e educadores físicos;</li>
+            <li>Comunidade acadêmica.</li>
+        </ul>
+
+        <p class="section-title" style="margin-left: 15px;">11.3 Funcionalidades principais</p>
+        <p class="body-text">Segundo o documento, o aplicativo possui as seguintes funcionalidades:</p>
+        <ul class="body-list">
+            <li>Cadastrar perfil do usuário;</li>
+            <li>Calcular TMB usando as fórmulas Mifflin-St Jeor e Harris-Benedict;</li>
+            <li>Calcular IMC e classificar o resultado;</li>
+            <li>Visualizar histórico de cálculos anteriores;</li>
+            <li>Gerar relatório personalizado.</li>
+        </ul>
+
+        <p class="section-title" style="margin-left: 15px;">11.4 Dados necessários para uso</p>
+        <p class="body-text">Antes de realizar os cálculos, o usuário deve preencher os seguintes dados:</p>
+        <ul class="body-list">
+            <li>Nome;</li>
+            <li>Idade;</li>
+            <li>Sexo;</li>
+            <li>Peso;</li>
+            <li>Altura;</li>
+            <li>Nível de atividade física.</li>
+        </ul>
+        <p class="body-text">Esses dados aparecem tanto na descrição dos casos de uso quanto no modelo de domínio do projeto.</p>
+    </div>
+
+    <!-- ============================
+     PÁGINA 7 — GUIA DO USUÁRIO (CONT.)
+=============================== -->
+    <div class="page">
+        <p class="section-title" style="margin-left: 15px;">11.5 Passo a passo de utilização</p>
+        
+        <p class="body-text"><strong>Passo 1 — Acessar a tela principal:</strong> 
+        Ao abrir o sistema, o usuário visualiza a tela de cálculo de IMC e TMB. Na prototipação, essa tela contém os campos de entrada e a opção para escolher a fórmula do cálculo da TMB. A página 6 mostra esse fluxo da tela inicial para o resultado e depois para histórico e relatório.</p>
+
+        <p class="body-text"><strong>Passo 2 — Preencher os dados do perfil:</strong> 
+        O usuário deve informar sexo, idade, peso, altura e nível de atividade. Esses dados serão usados para calcular tanto o IMC quanto a TMB.</p>
+
+        <p class="body-text"><strong>Passo 3 — Escolher a fórmula da TMB:</strong> 
+        O sistema permite selecionar uma entre duas fórmulas para o cálculo da Taxa Metabólica Basal: Mifflin-St Jeor ou Harris-Benedict. Essa escolha está prevista nos objetivos funcionais e nos casos de uso principais.</p>
+
+        <p class="body-text"><strong>Passo 4 — Executar o cálculo:</strong> 
+        Após preencher os dados, o usuário clica no botão Calcular TMB e IMC. O fluxo principal descrito no documento informa que, ao realizar essa ação, o sistema calcula e exibe os resultados com explicação.</p>
+
+        <p class="body-text"><strong>Passo 5 — Visualizar os resultados:</strong> 
+        O sistema apresenta o valor do IMC, classificação do IMC, valor da TMB, explicação do resultado e recomendações relacionadas ao déficit ou superávit calórico. Isso também é mostrado nos protótipos de tela do documento.</p>
+
+        <p class="body-text"><strong>Passo 6 — Consultar o histórico:</strong> 
+        Depois do cálculo, o usuário pode acessar a tela de histórico para visualizar cálculos anteriores de IMC e TMB. Essa funcionalidade está prevista nos casos de uso principais e nos protótipos.</p>
+
+        <p class="body-text"><strong>Passo 7 — Gerar relatório:</strong> 
+        O sistema também permite gerar um relatório em PDF para o usuário, conforme o protótipo apresentado no documento.</p>
+
+        <p class="section-title" style="margin-left: 15px;">11.6 Regras gerais de uso</p>
+        <ul class="body-list">
+            <li>Os dados devem ser preenchidos corretamente para que o cálculo seja confiável.</li>
+            <li>A escolha da fórmula da TMB influencia o resultado final.</li>
+            <li>O histórico permite acompanhar a evolução dos resultados ao longo do tempo.</li>
+            <li>O relatório pode ser usado para consulta posterior ou compartilhamento com profissional de saúde.</li>
+        </ul>
+
+        <p class="section-title" style="margin-left: 15px;">11.7 Requisitos de uso</p>
+        <p class="body-text">O documento informa que o sistema deve funcionar em navegadores modernos, como Chrome, Firefox e Edge, além de dispositivos móveis.</p>
+    </div>
+
+    <!-- ============================
+     PÁGINA 8 — DIAGRAMA DE IMPLANTAÇÃO
+=============================== -->
+    <div class="page">
+        <p class="section-title-numbered">12. Diagrama de Implantação</p>
+        <p class="body-text">Como o documento não apresenta um diagrama de implantação pronto, abaixo está uma versão coerente com o que o sistema descreve: uma aplicação acessada pelo navegador, com interface, lógica de cálculo e armazenamento do histórico. Essa estrutura é inferida a partir das funcionalidades de cadastro, cálculo, histórico e geração de relatório mostradas no projeto.</p>
+
+        <p class="section-title" style="margin-left: 15px;">12.1 Diagrama de implantação em Mermaid</p>
+        <div class="diagram-container" style="text-align: center;">
+            <img src="./mermaid-diagram.png" alt="Diagrama de Implantação" style="max-width: 100%; max-height: 400px; border: 1px solid #ccc; margin: 20px auto; display: block;">
+        </div>
+
+        <p class="section-title" style="margin-left: 15px;">12.2 Explicação do diagrama</p>
+        <ul class="body-list">
+            <li>O usuário acessa o sistema por computador ou celular.</li>
+            <li>A interface recebe os dados inseridos.</li>
+            <li>O servidor da aplicação processa as informações.</li>
+            <li>Os módulos internos realizam cálculo do IMC, cálculo da TMB, classificação do IMC e geração do relatório.</li>
+            <li>O banco de dados armazena os dados do usuário e o histórico de cálculos.</li>
+        </ul>
+    </div>
+
+    <!-- ============================
+     PÁGINA 9 — CONCLUSÃO E REFERÊNCIAS
+=============================== -->
+    <div class="page">
+        <p class="section-title-numbered">13. Conclusão</p>
 
         <p class="body-text">
             A calculadora Metabólica Meta Calc atende à necessidade de fornecer uma ferramenta acessível, rápida e precisa para o acompanhamento de indicadores de saúde. A Iteração 2 trouxe refinamentos em sua documentação e ajustes de estrutura, garantindo que o software siga padrões acadêmicos e profissionais para os interessados na área da saúde.
         </p>
 
-        <p class="section-title-numbered">12. Referência Bibliográfica</p>
+        <p class="section-title-numbered">14. Referência Bibliográfica</p>
 
         <p class="body-text">
             MIFFLIN, M. D.; ST JEOR, S. T.; HILL, L. A.; SCOTT, B. J.; DAUGHERTY, S. A.; KOH, Y. O. A new predictive equation for resting energy expenditure in healthy individuals. The American Journal of Clinical Nutrition, v. 51, n. 2, p. 241-247, 1990.
