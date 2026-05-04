@@ -251,6 +251,7 @@ GCT = TMB × Fator de Atividade
 
 ### Versão 2.0 (Atual — 2026)
 - Renomeado para **Meta Calc — Calculadora Metabólica**
+- Modificação para a Iteração 2
 - Design completamente refatorado com paleta verde saúde e tema claro
 - Salvamento automático no histórico a cada cálculo (sem botão manual)
 - Sistema de toast notifications para feedbacks
