@@ -6,7 +6,7 @@
 
 ---
 
-## 👥 Equipe de Desenvolvimento
+## Equipe de Desenvolvimento
 
 | Nome | RA |
 |------|----|
@@ -19,7 +19,7 @@
 
 ---
 
-## 📋 Sobre o Projeto
+## Sobre o Projeto
 
 **Meta Calc** é uma aplicação web profissional para cálculo da Taxa Metabólica Basal (TMB) e Índice de Massa Corporal (IMC), desenvolvida como projeto avaliativo de disciplina. A aplicação oferece uma interface moderna, intuitiva e acessível voltada a profissionais de saúde, estudantes e usuários que desejam monitorar indicadores corporais com precisão.
 
@@ -27,9 +27,9 @@ O nome **Meta Calc** une *meta* (metabolismo) com *calc* (calculadora), refletin
 
 ---
 
-## ⚡ Funcionalidades
+## Funcionalidades
 
-### 🧮 Cálculos Principais
+### Cálculos Principais
 - **IMC (Índice de Massa Corporal)**: cálculo pela fórmula `peso / altura²`
 - **TMB (Taxa Metabólica Basal)**: duas fórmulas reconhecidas pela literatura:
   - **Mifflin-St Jeor** *(recomendada, mais moderna)*
@@ -37,7 +37,7 @@ O nome **Meta Calc** une *meta* (metabolismo) com *calc* (calculadora), refletin
 - **Gasto Calórico Total (GCT)**: TMB × fator de atividade
 - Metas calóricas personalizadas para perda ou ganho de 0,5 kg/semana
 
-### 📊 Recursos e Melhorias
+### Recursos e Melhorias
 
 | Funcionalidade | Descrição |
 |---|---|
@@ -52,27 +52,27 @@ O nome **Meta Calc** une *meta* (metabolismo) com *calc* (calculadora), refletin
 | Atalhos de teclado | `Ctrl+Enter` para calcular · `Esc` para novo cálculo |
 | Fluxo de uso guiado | Banner com etapas visuais do processo (preenchimento → cálculo → histórico) |
 
-### 🎯 Objetivos Atendidos
+### Objetivos Atendidos
 
 #### Funcionais
-✅ Calcular TMB usando equações de Mifflin-St Jeor e Harris-Benedict
-✅ Calcular IMC com base em peso e altura
-✅ Gerar relatórios personalizados com sugestões calóricas
-✅ Comparar resultados com padrões da OMS
-✅ Compartilhar resultados via WhatsApp
-✅ Salvar automaticamente cada consulta no histórico local
-✅ Recomendações personalizadas por categoria de IMC
+Calcular TMB usando equações de Mifflin-St Jeor e Harris-Benedict
+Calcular IMC com base em peso e altura
+Gerar relatórios personalizados com sugestões calóricas
+Comparar resultados com padrões da OMS
+Compartilhar resultados via WhatsApp
+Salvar automaticamente cada consulta no histórico local
+Recomendações personalizadas por categoria de IMC
 
 #### Não-Funcionais
-✅ **Desempenho**: interface rápida, sem dependências externas além de Font Awesome e Google Fonts
-✅ **Segurança**: dados armazenados exclusivamente no navegador do usuário (localStorage)
-✅ **Usabilidade**: fluxo guiado com etapas visuais, feedback por toast e validação em tempo real
-✅ **Compatibilidade**: funciona em navegadores modernos (Chrome, Firefox, Edge, Safari)
-✅ **Acessibilidade**: HTML semântico, contraste adequado, labels descritivos e navegação por teclado
+**Desempenho**: interface rápida, sem dependências externas além de Font Awesome e Google Fonts
+**Segurança**: dados armazenados exclusivamente no navegador do usuário (localStorage)
+**Usabilidade**: fluxo guiado com etapas visuais, feedback por toast e validação em tempo real
+**Compatibilidade**: funciona em navegadores modernos (Chrome, Firefox, Edge, Safari)
+**Acessibilidade**: HTML semântico, contraste adequado, labels descritivos e navegação por teclado
 
 ---
 
-## 🚀 Tecnologias Utilizadas
+## Tecnologias Utilizadas
 
 | Tecnologia | Uso |
 |---|---|
@@ -85,7 +85,7 @@ O nome **Meta Calc** une *meta* (metabolismo) com *calc* (calculadora), refletin
 
 ---
 
-## 📁 Estrutura do Projeto
+## Estrutura do Projeto
 
 ```
 meta-calc/
@@ -97,7 +97,7 @@ meta-calc/
 
 ---
 
-## 🔧 Como Executar
+## Como Executar
 
 ### Pré-requisitos
 Qualquer navegador moderno (Chrome 90+, Firefox 88+, Edge 90+, Safari 14+).
@@ -118,7 +118,7 @@ cd imc_meta_calc_ads
 
 ---
 
-## 📱 Fluxo de Uso
+## Fluxo de Uso
 
 ```
 1. Preencha os dados pessoais
@@ -147,7 +147,7 @@ cd imc_meta_calc_ads
 
 ---
 
-## 📊 Validações Implementadas
+## Validações Implementadas
 
 | Campo | Regra |
 |-------|-------|
@@ -160,7 +160,7 @@ cd imc_meta_calc_ads
 
 ---
 
-## 🧪 Fórmulas Utilizadas
+## Fórmulas Utilizadas
 
 ### IMC
 ```
@@ -194,7 +194,7 @@ GCT = TMB × Fator de Atividade
 
 ---
 
-## 📈 Classificação do IMC — OMS
+## Classificação do IMC — OMS
 
 | Faixa | Classificação |
 |-------|---------------|
@@ -207,7 +207,7 @@ GCT = TMB × Fator de Atividade
 
 ---
 
-## 🎨 Design
+## Design
 
 - **Tema**: Claro com paleta verde ligada à saúde e bem-estar
 - **Cores principais**: `#16a34a` (verde-600), `#14b8a6` (teal-500), `#f0fdf4` (fundo verde-suave)
@@ -218,7 +218,7 @@ GCT = TMB × Fator de Atividade
 
 ---
 
-## 🔒 Segurança e Privacidade
+## Segurança e Privacidade
 
 - **Dados locais**: todas as informações ficam exclusivamente no `localStorage` do navegador
 - **Sem servidor**: não há transmissão de dados pessoais para terceiros
@@ -227,7 +227,7 @@ GCT = TMB × Fator de Atividade
 
 ---
 
-## 📝 Casos de Uso
+## Casos de Uso
 
 ### Caso de Uso 1 — Calcular TMB
 - **Ator**: Usuário
@@ -247,7 +247,7 @@ GCT = TMB × Fator de Atividade
 
 ---
 
-## 📝 Histórico de Versões
+## Histórico de Versões
 
 ### Versão 2.0 (Atual — 2026)
 - Renomeado para **Meta Calc — Calculadora Metabólica**
@@ -264,8 +264,8 @@ GCT = TMB × Fator de Atividade
 - Script movido para o final do body (melhoria de performance)
 
 ### Versão 1.1
-- ✅ Compartilhamento de resultados via WhatsApp
-- ✅ Ícone WhatsApp integrado ao botão
+- Compartilhamento de resultados via WhatsApp
+- Ícone WhatsApp integrado ao botão
 
 ### Versão 1.0
 - Cálculos básicos de TMB e IMC
@@ -275,7 +275,7 @@ GCT = TMB × Fator de Atividade
 
 ---
 
-## 🤝 Contribuições
+## Contribuições
 
 Este projeto é desenvolvido para fins acadêmicos na **Universidade Presbiteriana Mackenzie**, como parte da avaliação da disciplina Prática Profissional em Análise e Desenvolvimento de Sistemas.
 
